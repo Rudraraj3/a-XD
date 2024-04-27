@@ -395,7 +395,7 @@ command(
   async (message, match) => {
     if (!message.isGroup) return await message.reply("*_This command only works in group chats_*")
     match = match || message.reply_message.text
-    if (!match) return await message.reply("*_Need Subject!_*\n*_Example: gname Ezra-MD Support!_.*")
+    if (!match) return await message.reply("*_Need Subject!_*\n*_Example: gname Anjan-MD Support!_.*")
     var { restrict } = message.client.groupMetadata(message.jid);;
     if (restrict && !(await isAdmin(message))) return await message.reply("*_I'm not admin_*");
     await message.client.groupUpdateSubject(message.jid, match)
@@ -419,7 +419,7 @@ command(
   async (message, match) => {
     if (!message.isGroup) return await message.reply("*_This command only works in group chats_*")
     match = match || message.reply_message.text
-    if (!match) return await message.reply("*_Need Description!_*\n*_Example: gdesc Ezra-XD Wa BOT!_*")
+    if (!match) return await message.reply("*_Need Description!_*\n*_Example: gdesc Anjan-md Wa BOT!_*")
     const participants =  await message.client.groupMetadata(message.jid)
     if (participants && !(await isAdmin(message.jid, message.user, message.client))) return await message.reply("_I'm not admin_");
     await message.client.groupUpdateDescription(message.jid, match)
