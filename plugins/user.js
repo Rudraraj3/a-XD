@@ -33,12 +33,12 @@ command(
     },
     async (message, match, client) => {
         const start = new Date().getTime();
-      let { key } = await message.sendMessage(`*𝙿𝚒𝚗𝚐 ㋞*`);
+      let { key } = await message.sendMessage(`*𝙿𝚒𝚗𝚐 😂*`);
         const end = new Date().getTime();
 var speed = end - start;
  
 await new Promise(t => setTimeout(t,0))
-         await message.client.sendMessage(message.jid,{text:`*𝙿𝚘𝚗𝚐* ㋚
+         await message.client.sendMessage(message.jid,{text:`*𝙿𝚘𝚗𝚐* 😂
 ${speed} *𝚖𝚜*` , edit: key});
 })
 
@@ -230,14 +230,14 @@ Description: ${i.desc}\`\`\``);
         const readMore = String.fromCharCode(8206).repeat(4001);
       let menu = `\n╔┉┉┉〔 ${BOT_INFO.split(";")[0]} 〕┉┉┉┉┉⚇
     ╔┅┅┅┅┅┅┅┅┅┅┅┅⚅
-  ⚈ ┋ *OWNER*: ${BOT_INFO.split(";")[1]}
-  ⚈ ┋ *USER*: ${usern}
-  ⚈ ┋ *DATE*: ${date}
-  ⚈ ┋ *TIME*: ${time}
-  ⚈ ┋ *COMMANDS*: ${plugins.commands.length}
-  ⚈ ┋ *MODE*: ${config.WORK_TYPE}
-  ⚈ ┋ *PREFIX*: ${config.HANDLERS}
-  ⚈ ┋ *VERSION*: ${require("../package.json").version}
+  ❀ ┋ *OWNER*: ${BOT_INFO.split(";")[1]}
+  ❀ ┋ *USER*: ${usern}
+  ❀ ┋ *DATE*: ${date}
+  ❀ ┋ *TIME*: ${time}
+  ❀ ┋ *COMMANDS*: ${plugins.commands.length}
+  ❀ ┋ *MODE*: ${config.WORK_TYPE}
+  ❀ ┋ *PREFIX*: ${config.HANDLERS}
+  ❀ ┋ *VERSION*: ${require("../package.json").version}
     ╚┅┅┅┅┅┅┅┅┅┅┅┅⚅
 ╚┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉⚇\n ${readMore}\n╔┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄⛒`;
 
@@ -275,10 +275,10 @@ menu += `\n╚┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄⛒`;
       return await message.sendFromUrl(vd, {fileLength: "500000000", gifPlayback: true, contextInfo: {
       mentionedJid: [m.sender],
       forwardingScore: 999,
-      isForwarded: true,
+      isForwarded: false,
       forwardedNewsletterMessageInfo: {
       newsletterJid: '120363239634100086@newsletter',
-      newsletterName: "𝗭𝗲𝘁𝗮-𝗫𝗗 ⛮",
+      newsletterName: "𝘼𝙉𝙅𝘼𝙉-𝐗𝐃 ⛮",
       serverMessageId: -1
             }}, caption: (penu)}, {quoted: message })
     }
@@ -325,7 +325,7 @@ command(
       if (desc) menu += `\n│  Use: \`\`\`${desc}\`\`\``;
       menu += `\n│\n`;
     });
-    menu += `╰───────┈┫「 𝐙𝐄𝐓𝐀-𝐗𝐃-𝐁𝐎𝐓 」┣┈────♡`;
+    menu += `╰───────┈┫「 𝘼𝙉𝙅𝘼𝙉-𝐗𝐃 」┣┈────♡`;
     return await message.reply(message.jid, { text: (tiny(menu)) })
 })
 
@@ -457,7 +457,7 @@ command(
 	type: 'user'
 }, async (message, match) => {
 	match = match || message.reply_message.text
-	if (!match) return await message.reply('*_Need Text_!*\n *Example: setbio _Ezra-XD_*.')
+	if (!match) return await message.reply('*_Need Text_!*\n *Example: setbio _Anjan-XD_*.')
 	await message.client.updateProfileStatus(match)
 	await message.reply('*_Successfully bio updated_*')
 })
